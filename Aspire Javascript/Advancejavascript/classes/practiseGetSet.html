@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+             #a
+            constructor(a){
+                this.#a=a
+            }
+
+            set data(value){
+                this.#a=value;
+        
+            }
+
+            get data(){
+                return this.#a;
+                
+             
+            }
+            
+        
+        
+        } 
+
+        let as = new A("radha");
+        as.data="krishna"
+        console.log(as.data)
+    </script>
+</body>
+</html>

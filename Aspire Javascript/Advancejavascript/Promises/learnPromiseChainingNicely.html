@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Promise Chaining</title>
+</head>
+<body>
+    <h1>Promise Chaining</h1>
+    <script>
+
+    //producer code
+     function boilWater(){
+       return new Promise(function(resolve,reject){
+                console.log("Boil water")
+                resolve()
+           
+        })
+     }
+
+
+     function addTeaLeaves(){
+        return  new Promise(function(resolve,reject){
+           console.log("add tea Leaves")
+           resolve()
+        })
+     }
+     function addMilk(){
+        return new Promise(function(resolve,reject){
+                console.log("add milk")
+                resolve()
+        })
+     }
+
+     function addSugar(){
+        return new Promise(function(resolve,reject){
+                console.log("Add Sugar")
+                resolve()
+        })
+     }
+     function serveTea(){
+       return new Promise(
+            function(resolve,reject){
+                console.log("serve tea")
+                resolve()
+            }
+        )
+     }
+
+
+     //consumer code
+     boilWater().then(
+        addTeaLeaves//need function not function call
+     ).then(addMilk)
+      .then(addSugar)
+      .then(serveTea)
+
+    </script>
+    
+</body>
+</html>

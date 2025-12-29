@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Closure</title>
+</head>
+<body>
+    <h1>Learn Clouser</h1>
+    <script>
+        function outerFun(){
+            let name="Raj Shah"
+            let count=0;
+            function innerFun(){
+                count++
+                console.log("name is",name)
+                console.log("count is",count)
+            }
+            return innerFun;
+        }
+        const myF1= outerFun()
+        myF1()
+        myF1()
+    </script>
+
+    <script>
+            function makeFunc() {
+                const name = "Mozilla";
+                
+                function displayName() {
+                    console.log(name);
+                }
+
+                return displayName;      
+            }
+
+            const myFunc = makeFunc();
+            myFunc();
+
+
+    </script>
+</body>
+</html>

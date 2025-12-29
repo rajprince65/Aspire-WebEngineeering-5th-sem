@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learngetElementsByClassName Specific</title>
+</head>
+<body>
+    <div id="rani">
+        <p>our intermediate work</p>
+        <p class="aspire">learn sepecfic use</p>
+        <p class="aspire">learn javascript loop</p>
+    </div>
+    <script>
+        let x = document.getElementById("rani");
+        let len = x.getElementsByClassName("aspire").length;
+        console.log(len)
+        for(let i=0 ; i<len; i++){
+            let result= x.getElementsByClassName("aspire")[i].innerHTML
+            document.write(result)
+            console.log(result)
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

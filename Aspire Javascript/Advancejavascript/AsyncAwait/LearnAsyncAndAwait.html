@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Async Await</title>
+</head>
+<body>
+    <script>
+       //producer 
+        function someApi(){
+            return new Promise(function(resolve,reject){
+                    console.log("our producer code")
+                    resolve("resolved")
+            })
+        }
+
+        //consumer
+
+        async function ourConsumer(){
+            const data = await someApi()
+            console.log(data)
+        } 
+        ourConsumer()
+    </script>
+
+<script>
+    // Producer
+    function someApi() {
+        console.log("Producer running");
+        return Promise.resolve("resolved");
+    }
+
+    // Consumer
+    async function consumer() {
+    const result = await someApi();
+    console.log(result);
+    }
+
+    consumer();
+
+</script>
+
+<script>
+    
+Promise.resolve().then(() => {
+  console.log("Microtask");
+});
+
+</script>
+</body>
+</html>

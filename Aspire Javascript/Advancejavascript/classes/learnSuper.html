@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Parent class
+        class Mobile {
+            constructor(brand) {
+                this.brand = brand;
+            }
+
+            showBrand() {
+                console.log("Brand:", this.brand);
+            }
+        }
+
+        // Child class
+        class Samsung extends Mobile {
+            constructor(model) {
+                // Call parent constructor
+                super("Samsung");
+
+                // Child's own property
+                this.model = model;
+            }
+
+            showDetails() {
+                console.log("Brand:", this.brand);
+                console.log("Model:", this.model);
+            }
+        }
+
+        // Create object
+        const phone = new Samsung("Galaxy S23");
+
+        // Call methods
+        phone.showBrand();     // Brand: Samsung
+        phone.showDetails();   // Brand: Samsung, Model: Galaxy S23
+
+    </script>
+</body>
+</html>

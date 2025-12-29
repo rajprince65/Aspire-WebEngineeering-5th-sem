@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor function</title>
+</head>
+<body>
+    <script>
+        function Student(name,roll){
+            this.name=name;
+            this.roll=roll;
+            //function created when creating every object
+            this.dispData=function(){
+                 console.log("name",this.name,"roll",this.roll)
+            }
+          
+        }
+        //shared function like class based
+        Student.prototype.showData=function(){
+            console.log("name",this.name,"roll",this.roll)
+        }
+
+       const obj1 = new Student("suman",21)
+       console.log(obj1)
+       obj1.showData()
+       obj1.dispData()
+
+       const obj2 = new Student("Ramesh",21)
+       console.log(obj2)
+       obj2.showData()
+       obj2.dispData()
+
+function Test() {
+  this.x = 10;
+  return { y: 20 };
+}
+
+console.log(new Test()) // { y: 20 }
+
+
+function Test1() {
+  this.x = 10;
+  return 5;
+}
+new Test1(); // { x: 10 }
+console.log(new Test1())
+
+    </script>
+    
+</body>
+</html>

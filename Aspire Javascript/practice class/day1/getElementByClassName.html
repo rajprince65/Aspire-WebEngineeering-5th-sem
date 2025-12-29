@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get element by class name</title>
+</head>
+<body>
+    <div>
+        <p class="aspire">this is our first class</p>
+        <p class="aspire">at lothse</p>
+        <p class="sirodha">second period</p>
+     </div>
+     <script>
+        let len = document.getElementsByClassName("aspire").length
+        document.write(len)
+        for(let i=0 ; i<len ; i++)
+        {
+          let result= document.getElementsByClassName('aspire')[i].innerHTML
+          document.write(result)
+
+        }
+        console.log(len)
+     </script>
+</body>
+</html>

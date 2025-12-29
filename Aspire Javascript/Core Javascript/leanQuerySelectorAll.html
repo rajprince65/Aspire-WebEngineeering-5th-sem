@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learngetElementsByClassName Specific</title>
+</head>
+<body>
+    <p id="relet">Leaflet<p>
+    
+
+    <div id="radha">
+        <p class="hd">learn javascript loop in hd radha</p>
+        <h1>Our college</h1>
+        <p>our intermediate work</p>
+
+        <p class="aspire">learn sepecfic use</p>
+        <p class="aspire">learn javascript loop</p>
+        <p id="relet">Leaflet<p>
+    </div>
+    <div id="rani">
+        <h1>Our college</h1>
+        <p>our intermediate work</p>
+        <p class="hd">learn javascript loop in aspire rani</p>
+        <p class="aspire">learn sepecfic use</p>
+        <p class="aspire">learn <span class="la">javascript</span> loop</p>
+        
+    </div>
+
+    <script>
+         // give all element found as list 
+       var result = document.querySelectorAll("p")
+       document.write(result)
+       console.log(result)
+
+    // give first element found 
+       var result = document.querySelectorAll("p,h1")
+       document.write(result)
+       console.log(result)
+
+       
+        // give all element found as list 
+       var result = document.querySelectorAll(".aspire")
+       document.write(result)
+       console.log(result)
+
+
+       
+        // give all element found as list 
+       var result = document.querySelectorAll("p.aspire")
+       document.write(result)
+       console.log(result)
+
+
+      
+      
+       
+        // give all element found as list 
+       var result = document.querySelectorAll("div[id]")
+       document.write(result)
+       console.log(result)
+
+
+       
+        // give all element found as list 
+       var result = document.querySelectorAll("div[id='rani']")
+       document.write(result)
+       console.log(result)
+
+         // give all element found as list 
+       var result = document.querySelectorAll("p>span.la")
+       document.write(result)
+       console.log(result)
+       
+
+
+        
+    </script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Async and Await</title>
+</head>
+<body>
+    <h1>Learn Async and Await</h1>
+    <script>
+        //Producer
+        function apiBoilWater(){
+            return new Promise(function(resolve,reject){
+                console.log("Boil water")
+                resolve()
+            })
+        }
+
+        function apiAddTeaLeaves(){
+            return new Promise(function(resolve,reject){
+                console.log("Add tea leaves")
+                resolve()
+            })
+        }
+
+        function apiAddMilk(){
+            return new Promise(function(resolve,reject){
+                console.log("Add Milk")
+                resolve()
+            })
+        }
+
+        function apiAddSugar(){
+            return new Promise(function(resolve,reject){
+                console.log("Add sugar")
+                resolve()
+            })
+        }
+        function apiServeTea(){
+            return new Promise(function(resolve,reject){
+               console.log("serve Tea")
+               resolve()
+            })
+        }
+
+        //consumer
+
+        async function MakeTea(){
+            await apiBoilWater();
+            await apiAddTeaLeaves();
+            await apiAddMilk();
+            await apiAddSugar();
+            await apiServeTea();
+            console.log("Tea is ready to drink!");
+        }
+        MakeTea()
+    </script>    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await chaining</title>
+</head>
+<body>
+
+    <script>
+            //boil water
+            //add tea leaves
+            //add milk
+            //add sugar
+            //serve tea
+
+// producer
+            function boilWater(){
+                return new Promise(function(resolve,reject){
+                    console.log("boil water")
+                    resolve()
+                })
+            }
+
+            function addTealeaves(){
+                return new Promise(function(resolve,reject){
+                    setTimeout(()=>{
+                        console.log("add tea leaves")
+                        resolve()
+
+                    },2000)
+                    
+                   
+                })
+            }
+
+            function addMilk(){
+                return new Promise(function(resolve,reject){
+                    setTimeout(()=>{
+                        console.log("add milk")
+                        resolve()
+                    },2000)
+                    
+                    resolve()
+                })
+            }
+
+            function addSugar(){
+                return new Promise(function(resolve,reject){
+                   setTimeout(()=>{
+                        console.log("add sugar")
+                        resolve()
+                   },4000)
+                })
+            }
+
+            function serveTea(){
+                return new Promise(function(resolve,reject){
+                   setTimeout(()=>{
+                    console.log("serve tea")
+                    resolve()
+                   },3000)
+                })
+            }
+
+
+//consumer
+
+            async function makeTea()
+            {
+                await boilWater()
+                await addTealeaves()
+                await addMilk()
+                await addSugar()
+                await serveTea()
+                console.log("tea is prepared")
+
+
+            }
+            makeTea()
+
+
+
+
+    </script>
+    
+</body>
+</html>

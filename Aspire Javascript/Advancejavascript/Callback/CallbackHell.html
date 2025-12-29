@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback hell</title>
+</head>
+<body>
+    <h1>Learn Callback Hell</h1>
+    <script>
+        // boil waiter
+        //Add tea leaves
+        // Add milk
+        // Serve tea
+
+
+        function boilWater(callback){
+            console.log("Boil Water")
+            callback()
+        }
+        function addTealeaves(callback){
+            console.log("add Tea leaves")
+            callback()
+        }
+
+         function addMilk(callback){
+            console.log("Add Milk")
+            callback()
+        }
+
+        function serveTea(){
+            console.log("Serve tea")
+        }
+       
+        boilWater(()=>{
+                addTealeaves(
+                    ()=>{
+                        addMilk(
+                            ()=>{
+                                serveTea()
+                            }
+                        )
+                    }
+                )
+        })
+    </script>
+</body>
+</html>

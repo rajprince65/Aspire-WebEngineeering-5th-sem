@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class in javascript</title>
+</head>
+<body>
+    <h1>We are learning class in javascript</h1>
+    <script>
+        class Mobile{
+             #balance = 675
+            constructor(color,modelno,balance){
+               this.color=color;
+               this.modelno=modelno;
+               this.#balance=balance;
+               document.write('This is constructor <br/>')
+                
+            }
+            show(){
+                document.write(`mobile color: ${this.color}
+                 modelno: ${this.modelno} balance:${this.#balance}<br/>`)
+            }
+        }
+
+        let obj1 = new Mobile("red",345,2000)
+        obj1.show()
+        document.write(obj1.balance)
+
+    </script>
+    
+</body>
+</html>

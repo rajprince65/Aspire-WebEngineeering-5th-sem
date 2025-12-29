@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>This is arrow function</h1>
+    <script>
+        const myFun=()=>{
+            document.write("This is arrow function<br/>");
+            document.write("end<br/>");
+        }
+        myFun()
+
+        const myEun = (username) => {
+            document.write("<br/>username of laptop is",username)
+        }
+        myEun("Raj Shah")
+
+        const myRun = (username) => (document.write("<br/>username of laptop is",username))
+        myRun("Raj Shah")
+                    // or
+        const myTun = (username) => document.write("<br/>username of laptop is",username)
+        myTun("Raj Shah")
+                    //or
+
+        const myPun = username => document.write("<br/>username of laptop is",username)
+        myPun("Raj Shah")
+
+        const fun =(username)=>{
+                    
+            return `username is:${username}<br/>`;
+        }
+       let str = fun("Suman Bastola")
+       document.write("<br/>",str)
+
+    //  Default parameter
+
+    function banTara(name="BaanTara"){
+
+        console.log("name of jungle is ",name);
+
+    }
+    banTara()
+    //arguments objects
+
+    function f8(){
+        for(let k in arguments){
+            console.log(k,"",arguments[k])
+        }
+    }
+    f8(20,30,40)
+
+    // or
+
+    function f9(){
+        for(let k of arguments){
+            console.log(k)
+        }
+    }
+    f9(60,50,40)
+        
+    </script>
+</body>
+</html>

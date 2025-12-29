@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Closure</title>
+</head>
+<body>
+    <h1>Learn closure</h1>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+    <script>
+        function outerFun(){
+            let username="Raj shah";
+            function innerFun(){
+                console.log("username is",username)
+            }
+            return innerFun
+        }
+        const myFun=outerFun()
+        myFun()
+
+    </script>
+    <script>
+        function makeFunc() {
+            const name = "Mozilla";
+            
+            function displayName() {
+                console.log(name);
+                
+            }
+            return displayName;
+        }
+
+        const myFunc = makeFunc();
+        myFunc();
+        
+    </script>
+    <!-- <script>
+       
+        document.getElementById("green").onclick=function(){
+                document.body.style.backgroundColor="green";
+        }
+        document.getElementById("red").onclick=function(){
+            document.body.style.backgroundColor="red";
+        }
+         document.getElementById("orange").onclick=function(){
+            document.body.style.backgroundColor="orange";
+        }
+    </script> -->
+    <script>
+        function setColor(color){
+           function giveColor(){
+
+                document.body.style.backgroundColor=`${color}`;
+
+            }
+            return giveColor;  
+                
+        }
+        document.getElementById("green").onclick=setColor("green")
+        document.getElementById("red").onclick=setColor("red")
+        document.getElementById("orange").onclick=setColor("orange")
+    </script>
+</body>
+</html>

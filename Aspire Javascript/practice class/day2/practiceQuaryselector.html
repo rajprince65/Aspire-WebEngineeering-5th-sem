@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn query querySelector</title>
+</head>
+<body>
+    <div id="radha">
+        <p class="ret">this is our second class</p>
+        <p class="set">in aspire</p>
+    </div>
+        <div id="krishna">
+        <p class="ret">this is our second class</p>
+        <p class="set">in aspire</p>
+    </div>
+    <script>
+        // let result=document.querySelector("p")
+        // let result=document.querySelector(".ret")
+        let result=document.querySelector("#ret","#set")
+        document.write(result)
+        console.log(result)
+    </script>
+</body>
+</html>

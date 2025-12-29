@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn inheritance</title>
+</head>
+<body>
+    <h1>Learn Inheritance</h1>
+    <script>
+        class Mobile{
+            brand="Nokia"
+            constructor(brand)
+            {
+                this.brand=brand;
+            }
+            call(){
+                document.write("<br/>name of parent brand is ",this.brand);
+            }
+        }
+        class Samsung extends Mobile{
+            constructor(name){
+              super("Nokia")
+              this.name=name
+            }
+        
+            brandName(){
+                super.call()
+
+                document.write("<br/>name of brand is",this.name)
+
+            }
+        }
+
+        const obj1=new Samsung("Samsung")
+        obj1.brandName()
+        // obj1.call()
+        
+    </script>
+</body>
+</html>

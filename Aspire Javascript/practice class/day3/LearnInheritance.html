@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn inheritance</title>
+</head>
+<body>
+    <h1>Learn Inheritance</h1>
+    <script>
+        class Mobile{
+            
+            call(){
+                document.write("call feature in my mobile");
+            }
+        }
+        class Samsung extends Mobile{
+        
+            camera(){
+                document.write("camera feature in samsung<br/>")
+
+            }
+        }
+
+        const obj1=new Samsung()
+        obj1.camera()
+        obj1.call()
+    </script>
+</body>
+</html>

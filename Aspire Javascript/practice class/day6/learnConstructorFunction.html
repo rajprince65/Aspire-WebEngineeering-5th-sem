@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <script>
+       function Student(name,roll){
+            this.name=name;
+            this.roll=roll;
+            this.dispValue=function(){
+                console.log("name",this.name)
+                console.log("roll",this.roll)
+            }
+        }
+        Student.prototype.showValue=function(){
+                console.log("name",this.name)
+                console.log("roll",this.roll)
+        }
+
+       const obj1 = new Student("suraj",21)
+       obj1.dispValue()
+       obj1.showValue()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Promise</title>
+</head>
+<body>
+    <h1>Learn Promise</h1>
+    <script>
+        //Producer code
+        function someApi(){
+            let p1 = new Promise(function(resolve,reject){
+              console.log("our call function running")
+               setTimeout(()=>{
+                let x=Math.round(Math.random()*10+1)
+                
+                if(x%2==0){
+                    resolve(x)
+                }else{
+                    reject(x)
+                }
+               },3000)
+            
+            })
+
+        return p1
+
+        }
+        
+      //consumer code
+
+       let p1 = someApi()
+       p1.then(
+        (result)=>(console.log("deliver",result)),
+        (error)=>(console.log("not deliver",error))
+       )
+       p1.catch((error)=>(console.log("In catch-rejected",error)))
+    </script>
+</body>
+</html>

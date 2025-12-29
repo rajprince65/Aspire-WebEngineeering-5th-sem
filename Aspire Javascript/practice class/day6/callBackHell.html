@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Hell</title>
+</head>
+<body>
+    <h1>Call Back Hell</h1>
+    <script>
+            // water boil
+            //add Tea leaves
+            //add Milk
+            //add Sugar
+            //serve Tea
+        // producer
+        function boilWater(callback){
+            console.log("1. Boil Water")
+            callback()
+        }
+
+        function addTeaLeaves(callback){
+            console.log("2. Add tea Leaves")
+            callback()
+        }
+
+        function addMilk(callback){
+            console.log("3. add milk")
+            callback()
+        }
+        function addSugar(callback){
+            console.log("4. add Sugar")
+            callback()
+        }
+        function serveTea(){
+            console.log("5. serve Tea")
+        
+        }
+
+        //consumer
+
+        boilWater(()=>{
+            addTeaLeaves(()=>{
+                addMilk(()=>{
+                    addSugar(()=>{
+                        serveTea()
+                    })
+                })
+            })
+        })
+
+           
+
+    </script>
+</body>
+</html>

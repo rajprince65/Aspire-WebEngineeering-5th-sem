@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn Callback</title>
+</head>
+<body>
+    <h1>Learn callback</h1>
+    <!-- <script>
+        function show(){
+            console.log("I am show function")
+        }
+        function aspire(callback){
+            console.log("Start")
+            callback()
+        }
+        aspire(show)
+
+    </script> -->
+
+    <!-- <script>
+       
+        function aspire(callback){
+            console.log("Start")
+            callback()
+        }
+        aspire(()=>{console.log("I am show function")}
+        )
+
+    </script> -->
+
+    <!-- <script>
+       
+        function aspire(callback){
+            let a=5;
+            console.log("Start")
+            callback(a)
+        }
+        aspire((a)=>{console.log("I am show function",a)}
+        )
+
+    </script> -->
+
+    <script>
+       
+        function aspire(a,callback){
+            console.log("Start")
+            callback(a)
+        }
+        
+        aspire("HI",(a)=>{console.log("I am show function",a)}
+        )
+
+     
+
+    </script>
+</body>
+</html>

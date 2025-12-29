@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn class</title>
+</head>
+<body>
+    <script>
+        class Student{
+            #mark=24
+            constructor(name,age,address){
+                this.name=name;
+                this.age=age;
+                this.address=address;
+
+             }
+            biodata(){
+                console.log(`name ${this.name} age ${this.age} address ${this.address} mark ${this.#mark} `)
+            }
+
+        }
+        let obj1 = new Student("subod",25,"amardaha")
+        obj1.biodata()
+        console.log(obj1.name)
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn static  variable</title>
+</head>
+<body>
+    <h1>learn static  variable</h1>
+    <script>
+       class Bank{
+            static intrestRate
+            name
+            constructor(name){
+                this.name=name;
+            }
+            static retValue()
+            {
+                
+                return this.intrestRate;
+            }
+            dispValue(){
+                console.log("the value of name is",this.name)
+            }
+           
+
+       } 
+
+   
+     Bank.intrestRate=5;
+     document.write("intrestrate is",Bank.retValue())
+     
+     const obj1 = new Bank("raj")
+     obj1.dispValue()
+    
+       
+    </script>
+</body>
+</html>

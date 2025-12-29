@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn getter and setter</title>
+</head>
+<body>
+    <script>
+
+        class User {
+            constructor(name) {
+                this._name = name; // internal (convention: _ means private-like)
+            }
+
+            // GETTER → runs when property is READ
+            get name() {
+                console.log("Getting name");
+                return this._name;
+            }
+
+            // SETTER → runs when property is UPDATED
+            set name(value) {
+                console.log("Setting name");
+                this._name = value;
+            }
+        }
+
+        const u = new User("Raj");
+
+        // setter is called
+        u.name = "Shah";
+
+        // getter is called
+        console.log(u.name);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Static Member</title>
+</head>
+<body>
+
+    <script>
+        class MathUtil {
+            // static property
+            static pi = 3.14;
+
+            // static method
+            static add(a, b) {
+                return a + b;
+            }
+
+            // non-static (instance) method
+            multiply(a, b) {
+                return a * b;
+            }
+        }
+
+        // Access static members (using class name)
+        console.log(MathUtil.pi);        // 3.14
+        console.log(MathUtil.add(2, 3)); // 5
+
+        // Create object (instance)
+        const math = new MathUtil();
+
+        // Access instance method
+        console.log(math.multiply(2, 3)); // 6
+
+        // ❌ These will cause errors
+        // math.pi;
+        // math.add(2, 3);
+
+    </script>
+    
+</body>s
+</html>

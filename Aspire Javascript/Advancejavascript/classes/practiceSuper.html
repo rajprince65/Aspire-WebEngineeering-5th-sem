@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(brand){
+
+               this.brand=brand
+            }
+            show()
+            {
+                console.log("brand is"+this.brand)
+            }
+
+        }
+
+        class B extends A{
+            constructor(phone){
+                super("samsung")
+                this.phone=phone
+            }
+            dispbrand()
+            {
+                console.log("phone type is "+ this.phone)
+            }
+
+        }
+        let b =new B("j9")
+        b.show()
+        b.dispbrand()
+
+        
+    </script>
+    
+</body>
+</html>

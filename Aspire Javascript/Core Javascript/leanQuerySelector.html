@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learngetElementsByClassName Specific</title>
+</head>
+
+<body>
+   <div id="radha">
+        <p class="hd">learn javascript loop in hd radha</p>
+        <h1>Our college</h1>
+        <p>our intermediate work</p>
+
+        <p class="aspire">learn sepecfic use</p>
+        <p class="aspire">learn javascript loop</p>
+        <p id="relet">Leaflet<p>
+    </div>
+    <div id="rani">
+        <h1>Our college</h1>
+        <p>our intermediate work</p>
+        <p class="hd">learn javascript loop in aspire rani</p>
+        <p class="aspire">learn sepecfic use</p>
+        <p class="aspire">learn javascript loop</p>
+        
+    </div>
+    <script>
+
+
+        var result = document.querySelector("p")
+        document.write(result)
+        console.log(result)
+
+        result = document.querySelector("#rani")
+        document.write(result)
+        console.log(result)
+
+        result = document.querySelector(".aspire")
+        document.write(result)
+        console.log(result)
+
+        // give first element found 
+
+        // give first element found 
+        var result = document.querySelector("p,h1")
+        document.write(result)
+        console.log(result)
+
+
+        result = document.querySelector("#rani","#radha")
+        document.write(result)
+        console.log(result)
+
+        result = document.querySelector(".aspire , .hd").innerHTML
+        document.write(result)
+        console.log(result)
+
+
+
+    </script>
+
+</body>
+
+</html>

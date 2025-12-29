@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Promise</title>
+</head>
+<body>
+    <h1>Learn Promise</h1>
+    <script>
+        //producer
+        function someApi(){
+            return new Promise(function(resolve,reject){
+                console.log("we are inside producer")
+                setTimeout(()=>{
+                    let x = Math.round(Math.random()*10+1)
+                    if(x%2===0){
+                        resolve(x)
+                    }else{
+                        reject(x)
+                    }
+                },2000)
+            })
+        
+        }
+
+
+        //Consumer
+        someApi().then(
+        (x)=>{
+            console.log("Success",x)
+
+        },
+        (x)=>{
+            console.log("Failure",x)
+        })
+
+
+    </script>
+    
+</body>
+</html>
