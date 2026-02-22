@@ -1,0 +1,43 @@
+.containergrid{
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+
+    grid-template-areas:  "sidebar nav   nav"
+                          "sidebar main  main"
+                          "footer footer footer";
+
+    gap: 20px;
+    border: 2px solid black;
+    height:100vh;
+}
+
+ .item{
+    background-color: rgb(227, 198, 198);
+    border: 2px solid rgb(64, 0, 255);
+}
+.item1{
+    grid-area: nav;
+
+}
+.item2{
+    grid-area: nav;
+}
+.item3{
+    grid-area: nav;
+}
+.item4{
+    grid-area: sidebar;
+}
+.item5{
+    grid-area: main;
+}
+.item6{
+    grid-area: main;
+}
+.item7{
+    grid-area: footer;
+}
+.item8{
+    grid-area: footer;
+}

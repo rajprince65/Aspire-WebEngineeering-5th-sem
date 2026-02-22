@@ -1,0 +1,31 @@
+.gridcontainer{
+    display: grid;
+    /* gap:10px; */
+    grid-template-columns: repeat(3,minmax(110px,1fr));  
+    grid-template-rows: 120px 120px;
+    border: solid 2px blue;
+    height:50vh;
+
+    
+    justify-items: center;
+    align-items:flex-start;
+
+
+
+}
+
+.gritem{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: solid 2px black;
+
+}
+.gitem1{
+    align-self:end ;
+}
+
+
+.gitem7{
+    justify-self: end;
+}

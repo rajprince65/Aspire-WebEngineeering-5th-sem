@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+    height: 100vh;
+    border: solid 2px blue;
+    justify-content: center;
+    align-items: center;
+    /* gap:50px */
+    row-gap: 10px;
+    
+    column-gap: 20px;
+    /* flex-wrap: wrap ; */
+    align-content: center;
+}
+.items{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 2px black;
+}
+
+.item1{
+ flex-grow: 0;
+ align-self: flex-start;
+
+}
+.item2{
+    /* flex-grow: 1; */
+    flex-shrink: 2;
+
+
+}
+.item10{
+    flex-grow: 2;
+} 
+.item11{
+    align-self: flex-start;
+}
